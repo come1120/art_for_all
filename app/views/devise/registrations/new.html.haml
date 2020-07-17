@@ -22,7 +22,7 @@
         = link_to "お問い合わせ ", "#", class: "main_list"
 
 .contents
-  = render "content"
+  = render "messages/content"
   .contents__btnbox
     .contents__btnbox--icon
       = link_to "https://www.facebook.com/", class: "contents__btn" do
@@ -38,22 +38,9 @@
     .contents__message--title
       美術への対策要請
     .contents__message--text
-      = render "text"
+      = render "messages/text"
 
-
-.formbox
-  .formbox__title
-    賛同署名フォーム
-    = render "form"
-   
-.messagebox
-  .messagebox__title
-    賛同メッセージ
-  = render @messages
-  .messagebox__link
-    = current_user.name
-    = link_to edit_user_path(current_user) do
-      = icon('fas', 'cog', class: 'icon')
+= render 'create_account'
 
 .infobox
   .infobox__title

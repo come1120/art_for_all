@@ -1,0 +1,4 @@
+.form
+  = form_for [@message] do |f|
+    = f.text_area :content, class: 'form__message', placeholder: 'type a message'
+    = f.submit 'Send', class: 'form__submit'

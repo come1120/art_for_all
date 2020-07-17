@@ -1,3 +1,271 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  width: 100%;
+  height: 30px;
+  background-color:#444444;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  &__lungage{
+    margin-left: 10px;
+  }
+  &__surch{
+    margin-right: 10px;
+  }
+}
+  
+
+.main{
+  width: 1000px;
+  height: 100%;
+  background-color:white;
+  box-shadow:
+    0 1.9px 2.5px rgba(95, 95, 95, 0.057),
+    0 5px 6.1px rgba(99, 99, 99, 0.076),
+    0 10.1px 11.4px rgba(90, 90, 90, 0.086),
+    0 19.2px 19.8px rgba(66, 66, 66, 0.092),;
+  margin-top: 100px;
+  padding: 80px;
+  margin: 100px auto;
+  &__logo{
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    font-style: oblique;
+    line-height: 150px;
+    color:white;
+    text-shadow    : 
+      2px  2px 1px #797979,
+      -2px  2px 1px #797979,
+      2px -2px 1px #797979,
+      -2px -2px 1px #797979,
+      2px  0px 1px #797979,
+      0px  2px 1px #797979,
+      -2px  0px 1px #797979,
+      0px -2px 1px #797979;
+  }
+  &__message{
+    text-align: center;
+    font-size: 50px;
+    color: #474747;
+    line-height: 80px;
+  }
+  &__listbox{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 48px;
+    .main_list{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+  
+.contents{
+  height: 100%;
+  margin-top: 100px;
+
+  &__aboutus{
+    height: 100%;
+    background-color:#313131;
+    margin-top: 100px;
+    padding: 120px;
+    &--title{
+      text-align: center;
+      font-size: 38px;
+      color:white;
+      text-shadow    : 
+        2px  2px 1px #797979,
+        -2px  2px 1px #797979,
+        2px -2px 1px #797979,
+        -2px -2px 1px #797979,
+        2px  0px 1px #797979,
+        0px  2px 1px #797979,
+        -2px  0px 1px #797979,
+        0px -2px 1px #797979;
+      line-height: 90px;
+      margin-bottom: 50px;
+    }
+    &--main{
+      height: 100%;
+      
+      &--sub{
+        color: white;
+        margin-bottom: 30px;
+        line-height: 33px;
+
+      }
+    }
+  }
+
+  &__btnbox{
+    background-color: #313131;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 200px 90px 200px;
+    &--icon{
+      .contents__btn{
+        text-decoration: none;
+        color:white;
+      }
+    }
+  }
+  
+  &__message{
+    height: 100%;
+    background-color:white;
+    padding: 100px;
+    &--title{
+      text-align: center;
+      font-size: 38px;
+      color:white;
+      text-shadow    : 
+        2px  2px 1px #797979,
+        -2px  2px 1px #797979,
+        2px -2px 1px #797979,
+        -2px -2px 1px #797979,
+        2px  0px 1px #797979,
+        0px  2px 1px #797979,
+        -2px  0px 1px #797979,
+        0px -2px 1px #797979;
+      line-height: 90px;
+      margin-bottom: 100px;
+    }
+    &--text{
+      width: 800px;
+      height:  100%;
+      box-shadow:
+        0 1.9px 2.5px rgba(95, 95, 95, 0.057),
+        0 5px 6.1px rgba(99, 99, 99, 0.076),
+        0 10.1px 11.4px rgba(90, 90, 90, 0.086),
+        0 19.2px 19.8px rgba(66, 66, 66, 0.092),;
+      background-color: white;
+      padding: 50px 90px;
+      margin: 0 auto;
+      &--title{
+        text-align: center;
+        font-weight: bold;
+        line-height: 50px;
+        margin-bottom: 40px;
+      }
+      &--name{
+        line-height: 15px;
+        margin-bottom: 40px;
+      }
+      &--main{
+        line-height: 25px;
+        margin-bottom: 40px;
+      }
+      &--bottom{
+        margin: 0 auto 40px 0;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.formbox{
+  height: 100%;
+  background-color:#313131;
+  margin-top: 50px;
+  padding: 120px;
+  &__title{
+    text-align: center;
+    font-size: 38px;
+    color:white;
+    text-shadow    : 
+      2px  2px 1px #797979,
+      -2px  2px 1px #797979,
+      2px -2px 1px #797979,
+      -2px -2px 1px #797979,
+      2px  0px 1px #797979,
+      0px  2px 1px #797979,
+      -2px  0px 1px #797979,
+      0px -2px 1px #797979;
+    line-height: 90px;
+    margin-bottom: 100px;
+  }
+  &__form{
+    &--text{
+      textarea {
+        width: 500px;
+      }
+      .message_submit{
+        width: 100px;
+        color: yellow;
+        background-color: yellow;
+        
+      }
+    }
+  }
+}
+  
+.messagebox{
+  width: 800px;
+  height:  100%;
+  background-color: white;
+  padding: 120px;
+  margin: 0 auto;
+  &__title{
+    text-align: center;
+    font-size: 38px;
+    color:white;
+    text-shadow    : 
+      2px  2px 1px #797979,
+      -2px  2px 1px #797979,
+      2px -2px 1px #797979,
+      -2px -2px 1px #797979,
+      2px  0px 1px #797979,
+      0px  2px 1px #797979,
+      -2px  0px 1px #797979,
+      0px -2px 1px #797979;
+    line-height: 90px;
+    margin-bottom: 80px;
+  }
+  &__message{
+    width: 100%;
+    height: 100%;
+    box-shadow:
+      0 1.9px 2.5px rgba(95, 95, 95, 0.057),
+      0 5px 6.1px rgba(99, 99, 99, 0.076),
+      0 10.1px 11.4px rgba(90, 90, 90, 0.086),
+      0 19.2px 19.8px rgba(66, 66, 66, 0.092),;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+    &--main{
+    }
+    &--user{
+    }
+  }
+}
+  
+.infobox{
+  height: 100%;
+  background-color:#313131;
+  margin-top: 100px;
+  padding: 10px;
+  &__title{
+    text-align: center;
+    font-size: 38px;
+    color:white;
+    text-shadow    : 
+      2px  2px 1px #797979,
+      -2px  2px 1px #797979,
+      2px -2px 1px #797979,
+      -2px -2px 1px #797979,
+      2px  0px 1px #797979,
+      0px  2px 1px #797979,
+      -2px  0px 1px #797979,
+      0px -2px 1px #797979;
+    line-height: 90px;
+  }
+  &__content{
+    text-align: center;
+    color: white;
+  }
+}
