@@ -1,0 +1,27 @@
+.sidetop
+  .sidetop__header
+    .sidetop__header--lungage
+      = icon('fa', 'bars fa-lg ')
+    .sidetop__header--surch
+      = icon('fa', 'search fa-lg')
+  
+  .sidetop__main
+    .sidetop__userbox
+      .sidetop__userbox--name
+        = current_user.name
+      .sidetop__userbox--edit
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'edit', class: 'icon')
+
+    .sidetop__listsbox
+      %ul
+        %li.header_lists
+          = link_to "ART FOR ALL ", { anchor: "art_for_all" }, class: "side_list"
+        %li.header_lists
+          = link_to "美術への対策要請 ", { anchor: "must_todo" }, class: "side_list"
+        %li.header_lists
+          = link_to "メッセージフォーム ", { anchor: "form" }, class: "side_list"
+        %li.header_lists
+          = link_to "賛同メッセージ ", { anchor: "message" }, class: "side_list" 
+        %li.header_lists
+          = link_to "お問い合わせ ", { anchor: "info" }, class: "side_list" 
