@@ -3,25 +3,45 @@
 }
 
 .header{
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 30px;
   background-color:#444444;
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
-  &__lungage{
+  
+  .header__lungage{
     margin-left: 10px;
   }
-  &__surch{
+  .header__surch{
     margin-right: 10px;
   }
+  .visibletree{
+    width: 100%;
+    height: 100%;
+    margin: 0 40px;
+    .header_lists{
+      display: flex;
+      .header_list{
+        padding: 0 20px;
+        text-decoration: none;
+        color:white;
+        line-height: 20px;
+        &:hover{
+          color: black;
+        }  
+      }
+    }
+  }
 }
-  
-
 .main{
   width: 1000px;
   height: 100%;
   background-color:white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
   box-shadow:
     0 1.9px 2.5px rgba(95, 95, 95, 0.057),
     0 5px 6.1px rgba(99, 99, 99, 0.076),
@@ -50,7 +70,7 @@
   &__message{
     text-align: center;
     font-size: 50px;
-    color: #474747;
+    color: black;
     line-height: 80px;
   }
   &__listbox{
@@ -122,16 +142,7 @@
     &--title{
       text-align: center;
       font-size: 38px;
-      color:white;
-      text-shadow    : 
-        2px  2px 1px #797979,
-        -2px  2px 1px #797979,
-        2px -2px 1px #797979,
-        -2px -2px 1px #797979,
-        2px  0px 1px #797979,
-        0px  2px 1px #797979,
-        -2px  0px 1px #797979,
-        0px -2px 1px #797979;
+      color:black;
       line-height: 90px;
       margin-bottom: 100px;
     }
@@ -167,105 +178,21 @@
     }
   }
 }
-
-.formbox{
-  height: 100%;
-  background-color:#313131;
-  margin-top: 50px;
-  padding: 120px;
-  &__title{
-    text-align: center;
-    font-size: 38px;
-    color:white;
-    text-shadow    : 
-      2px  2px 1px #797979,
-      -2px  2px 1px #797979,
-      2px -2px 1px #797979,
-      -2px -2px 1px #797979,
-      2px  0px 1px #797979,
-      0px  2px 1px #797979,
-      -2px  0px 1px #797979,
-      0px -2px 1px #797979;
-    line-height: 90px;
-    margin-bottom: 100px;
-  }
-  &__form{
-    &--text{
-      textarea {
-        width: 500px;
-      }
-      .message_submit{
-        width: 100px;
-        color: yellow;
-        background-color: yellow;
-        
-      }
-    }
-  }
-}
-  
-.messagebox{
-  width: 800px;
-  height:  100%;
-  background-color: white;
-  padding: 120px;
-  margin: 0 auto;
-  &__title{
-    text-align: center;
-    font-size: 38px;
-    color:white;
-    text-shadow    : 
-      2px  2px 1px #797979,
-      -2px  2px 1px #797979,
-      2px -2px 1px #797979,
-      -2px -2px 1px #797979,
-      2px  0px 1px #797979,
-      0px  2px 1px #797979,
-      -2px  0px 1px #797979,
-      0px -2px 1px #797979;
-    line-height: 90px;
-    margin-bottom: 80px;
-  }
-  &__message{
-    width: 100%;
-    height: 100%;
-    box-shadow:
-      0 1.9px 2.5px rgba(95, 95, 95, 0.057),
-      0 5px 6.1px rgba(99, 99, 99, 0.076),
-      0 10.1px 11.4px rgba(90, 90, 90, 0.086),
-      0 19.2px 19.8px rgba(66, 66, 66, 0.092),;
-    background-color: white;
-    padding: 20px;
-    margin: 0 auto;
-    &--main{
-    }
-    &--user{
-    }
-  }
-}
   
 .infobox{
   height: 100%;
   background-color:#313131;
-  margin-top: 100px;
-  padding: 10px;
+  margin-top: 200px;
+  padding-bottom: 20px;
   &__title{
     text-align: center;
-    font-size: 38px;
+    font-size: 20px;
     color:white;
-    text-shadow    : 
-      2px  2px 1px #797979,
-      -2px  2px 1px #797979,
-      2px -2px 1px #797979,
-      -2px -2px 1px #797979,
-      2px  0px 1px #797979,
-      0px  2px 1px #797979,
-      -2px  0px 1px #797979,
-      0px -2px 1px #797979;
     line-height: 90px;
   }
   &__content{
     text-align: center;
+    font-size: 15px;
     color: white;
   }
 }

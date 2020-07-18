@@ -3,14 +3,16 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
 
       t.string :name,               null: false
+      t.string :work,               null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-
+      t.integer :birth_year,        null: false
+      
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
       t.datetime :remember_created_at
-      t.timestamps null: false
+      t.timestamps                  null: false
     end
 
     add_index :users, :name,                 unique: true

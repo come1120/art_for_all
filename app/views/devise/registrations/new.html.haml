@@ -1,50 +1,52 @@
-.header
-  .header__lungage
-    = icon('fa', 'bars fa-lg ')
-  .header__surch
-    = icon('fa', 'search fa-lg')
-.main
-  .main__logo
-    ART FOR ALL 
-  .main__message
-    美術への対策要請 
-  .main__listbox
-    %ul
-      %li
-        = link_to "ART FOR ALL ", "#", class: "main_list"
-      %li
-        = link_to "美術への対策要請 ", "#", class: "main_list"
-      %li
-        = link_to "賛同署名フォーム ", "#", class: "main_list"
-      %li
-        = link_to "賛同メッセージ ", "#", class: "main_list" 
-      %li
-        = link_to "お問い合わせ ", "#", class: "main_list"
+.account-page
+  .account-page__content
+    .account-page__btn
+      %h2 賛同署名フォーム
+      %h5 アカウントの作成
 
-.contents
-  = render "messages/content"
-  .contents__btnbox
-    .contents__btnbox--icon
-      = link_to "https://www.facebook.com/", class: "contents__btn" do
-        = icon('fab', 'facebook-square fa-2x')
-    .contents__btnbox--icon
-      = link_to "https://twitter.com/", class: "contents__btn" do
-        = icon('fab', 'twitter fa-2x')
-    .contents__btnbox--icon
-      = link_to "https://www.instagram.com/", class: "contents__btn" do
-        = icon('fab', 'instagram fa-2x')
-   
-  .contents__message
-    .contents__message--title
-      美術への対策要請
-    .contents__message--text
-      = render "messages/text"
+      .account-page__btn--user_form
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
 
-= render 'create_account'
+          .field
+            .field-label
+              = f.label :name
+            .field-input
+              = f.text_field :name, autofocus: true
+          
+          .field
+            - year = []
+            - for num in 0..100
+              - year << 2020-num
+            .field-label
+              = f.label :birth_year
+            .field-input
+              = f.select :birth_year, year, {prompt: "--"}
+          
+          .field
+            .field-label
+              = f.label :work
+            .field-input
+              = f.text_field :work, autofocus: true
 
-.infobox
-  .infobox__title
-    お問い合わせ
-  .infobox__content
-    art for all「美術への緊急対策要請」委員会 
-    %br coronaartmeeting@gmail.com
+          .field
+            .field-label
+              = f.label :email
+            .field-input
+              = f.email_field :email
+
+          .field
+            .field-label
+              = f.label :password
+              %i (英数字8文字以上)
+            .field-input
+              = f.password_field :password, autocomplete: "off"
+
+          .field
+            .field-label
+              = f.label :password_confirmation
+            .field-input
+              = f.password_field :password_confirmation, autocomplete: "off"
+          
+          .actions
+            = f.submit "Create Account", class: 'btn'

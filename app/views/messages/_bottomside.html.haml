@@ -1,0 +1,32 @@
+.b_main
+  .b_main__logo
+    ART FOR ALL 
+  .b_main__message
+    %h3 Members Station
+
+.contents#art_for_all
+  = render "content"
+
+  .contents__message#must_todo
+    .contents__message--title
+      美術への対策要請
+    .contents__message--text
+      = render "text"
+
+
+.formbox#form
+  .formbox__title
+    メッセージフォーム
+  = render "form"
+   
+.messagebox#message
+  .messagebox__title
+    賛同メッセージ
+  = render @messages
+
+.infobox#info
+  .infobox__title
+    お問い合わせ
+  .infobox__content
+    art for all「美術への緊急対策要請」委員会 
+    %br coronaartmeeting@gmail.com

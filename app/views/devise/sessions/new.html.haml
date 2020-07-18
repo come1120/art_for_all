@@ -1,8 +1,22 @@
 .header
   .header__lungage
     = icon('fa', 'bars fa-lg ')
+  .visibletree
+    %ul.header_lists
+      %li
+        = link_to "ART FOR ALL", { anchor: "art_for_all" }, class: "header_list"
+      %li
+        = link_to "美術への対策要請", { anchor: "must_todo" }, class: "header_list"
+      %li
+        = link_to "賛同署名フォーム", { anchor: "form" }, class: "header_list"
+      %li
+        = link_to "Members Station", { anchor: "member" }, class: "header_list" 
+      %li
+        = link_to "お問い合わせ", { anchor: "info" }, class: "header_list"
+
   .header__surch
     = icon('fa', 'search fa-lg')
+
 .main
   .main__logo
     ART FOR ALL 
@@ -11,17 +25,17 @@
   .main__listbox
     %ul
       %li
-        = link_to "ART FOR ALL ", "#", class: "main_list"
+        = link_to "ART FOR ALL ", { anchor: "art_for_all" }, class: "main_list"
       %li
-        = link_to "美術への対策要請 ", "#", class: "main_list"
+        = link_to "美術への対策要請 ", { anchor: "must_todo" }, class: "main_list"
       %li
-        = link_to "賛同署名フォーム ", "#", class: "main_list"
+        = link_to "賛同署名フォーム ", { anchor: "form" }, class: "main_list"
       %li
-        = link_to "賛同メッセージ ", "#", class: "main_list" 
+        = link_to "Members Station ", { anchor: "member" }, class: "main_list"
       %li
-        = link_to "お問い合わせ ", "#", class: "main_list"
+        = link_to "お問い合わせ ", { anchor: "info" }, class: "main_list"
 
-.contents
+.contents#art_for_all
   = render "messages/content"
   .contents__btnbox
     .contents__btnbox--icon
@@ -34,7 +48,7 @@
       = link_to "https://www.instagram.com/", class: "contents__btn" do
         = icon('fab', 'instagram fa-2x')
    
-  .contents__message
+  .contents__message#must_todo
     .contents__message--title
       美術への対策要請
     .contents__message--text
@@ -42,7 +56,7 @@
 
 = render 'log_in'
 
-.infobox
+.infobox#info
   .infobox__title
     お問い合わせ
   .infobox__content
