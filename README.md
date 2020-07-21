@@ -1,13 +1,25 @@
-## 🌐 App URL
-
-### **https://cupramen-timer.firebaseapp.com**  
+## 🌐 App 
+Art for All
 　
-## 💬 Usage
+## 💬 概要
+  コロナ禍における、芸術、文化に関わる、一人一人が自らの声と意思を表明場所。
+「美術への対策要請書」の紹介、およびメンバーシップへの参加、そして、メンバーである人々の交流の場としてのウェブサイトを制作しました。
 
-`$ git clone https://github.com/aocattleya/Ramen-Timer.git`  
-　
-## :art: Character Design
+## 🖼 制作背景(意図)
+　今年に入ってから、私自信を含む多くの人を悩ませたコロナ危機のなかで、美術に携わる人々からの具体的な意思表明は、ほとんどありませんでした。しかし、一部の活動家の中から声が上がりはじめ、私の耳にも届いた時、『これは、不要では無いだろうけど、不急ではないか？』と複雑な気持ちになりました。
+　そこで、声を形にする意思表明としてのサイトと、賛同する人々のためのコミュニティスペースが一緒になったウェブサイトがあったらいいのに、そう思って制作しました。
 
-<p align="center">
-  <img src="https://〜.png" width=70%>  
-</p>　
+## 💻使用技術・本番環境
+ruby on rails,haml,scss,github,mySQL
+
+## DEMO
+
+https://i.gyazo.com/1706d68818c520ae26e6bdc77a6495f5.mp4
+https://i.gyazo.com/4c335c9ed90294aaf146e16ec1272790.mp4
+https://i.gyazo.com/c2e21cff1898b32fbb66b5791061ebc2.mp4
+
+
+##　DB設計
+
+
+## 今後の課題
