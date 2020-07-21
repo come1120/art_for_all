@@ -12,6 +12,8 @@ Art for All
 ## 💻使用技術・本番環境
 ruby on rails,haml,scss,github,mySQL
 
+デプロイはまだ行っていません。
+
 ## DEMO
 
 https://i.gyazo.com/1706d68818c520ae26e6bdc77a6495f5.mp4
@@ -21,5 +23,31 @@ https://i.gyazo.com/c2e21cff1898b32fbb66b5791061ebc2.mp4
 
 ##　DB設計
 
+usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false,index: true|
+|work|string|null: false|
+|birth_year|integer|null: false|
+|password|string|null: false,index: true|
+|name|string|null: false, index: true|
+
+### Association
+- has_many :messages
+
+messsagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|content|string|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+
 
 ## 今後の課題
+
+jsを実装して動的なサイトにしたいとおもいます。非同期更新など。
+ユーザーページなども作りたいと思います。
